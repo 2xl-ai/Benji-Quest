@@ -1,4 +1,34 @@
-Benji's Quest latest consolidated build. Deploy with npx wrangler deploy.
+# Benji's Quest
+
+**Everyday jobs become adventures.** Benji's Quest is a small family web app that turns chores into quests. Kids tick off quests to earn points, level up, keep a daily streak, unlock badges and spend points in a rewards shop. Parents manage everything from a PIN-protected Parent HQ.
+
+![Kid view: today's quests, rewards shop, points and level](docs/screenshots/kid.png)
+
+## Features
+
+- **Quests and points:** each chore is worth points, and points build up into levels and daily streaks.
+- **Rewards shop:** kids spend points on treats, outings or screen time, with an optional daily screen-time cap.
+- **Badges:** milestones for points earned, level reached, quests completed, or a particular chore done a number of times.
+- **Parent HQ:** add and edit chores, rewards, penalties and badges; approve completed quests before points are awarded; apply penalties.
+- **Dashboard and calendar:** weekly, monthly and yearly totals, plus a day-by-day history.
+- **Works on phones:** responsive layout and installable as a home-screen app. One shared family state syncs across every device.
+
+| Parent HQ | Mobile |
+|---|---|
+| <img src="docs/screenshots/parent.png" alt="Parent HQ dashboard with monthly points" width="560"> | <img src="docs/screenshots/mobile.png" alt="Kid view on a phone" width="220"> |
+
+## How it's built
+
+- A single [Cloudflare Worker](https://developers.cloudflare.com/workers/) (`src/worker.js`) serves the JSON API and the static front end in `public/`.
+- State lives in [Cloudflare D1](https://developers.cloudflare.com/d1/) (SQLite). The tables are created automatically on first request.
+- Plain HTML, CSS and JavaScript: no framework and no build step.
+- A family passcode unlocks the app on each device, and a separate parent PIN unlocks Parent HQ.
+
+## Deploy
+
+1. Create a D1 database with `npx wrangler d1 create benjis-quest-db`, then put its id in `wrangler.jsonc` under `d1_databases`.
+2. Set the three secrets described below.
+3. Run `npx wrangler deploy`.
 
 ## Secrets
 
