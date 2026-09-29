@@ -2,20 +2,20 @@
 
 **Everyday jobs become adventures.** Benji's Quest is a small family web app that turns chores into quests. Kids tick off quests to earn points, level up, keep a daily streak, unlock badges and spend points in a rewards shop. Parents manage everything from a PIN-protected Parent HQ.
 
-![Kid view: today's quests, rewards shop, points and level](docs/screenshots/kid.png)
+![Kid view: the Today's Quests tab with points, level and progress](docs/screenshots/kid.png)
 
 ## Features
 
 - **Quests and points:** each chore is worth points, and points build up into levels and daily streaks.
 - **Rewards shop:** kids spend points on treats, outings or screen time, with an optional daily screen-time cap.
 - **Badges:** milestones for points earned, level reached, quests completed, or a particular chore done a number of times.
-- **Parent HQ:** add and edit chores, rewards, penalties and badges; approve completed quests before points are awarded; apply penalties.
+- **Parent HQ:** one tab per job, opening on Approvals so completed quests can be approved before points are awarded; add and edit chores, rewards, penalties and badges; apply penalties.
 - **Dashboard and calendar:** weekly, monthly and yearly totals, plus a day-by-day history.
 - **Works on phones:** responsive layout and installable as a home-screen app. One shared family state syncs across every device.
 
 | Parent HQ | Mobile |
 |---|---|
-| <img src="docs/screenshots/parent.png" alt="Parent HQ dashboard with monthly points" width="560"> | <img src="docs/screenshots/mobile.png" alt="Kid view on a phone" width="220"> |
+| <img src="docs/screenshots/parent.png" alt="Parent HQ tabs with the Dashboard tab showing monthly points" width="560"> | <img src="docs/screenshots/mobile.png" alt="Kid view on a phone, opening on Today's Quests" width="220"> |
 
 ## How it's built
 
