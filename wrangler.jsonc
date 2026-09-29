@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "benjis-quest-v2",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-08-29",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "benjis-quest-db",
+      "database_id": "4e28776a-0daa-460d-97b1-10e58a95474e"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

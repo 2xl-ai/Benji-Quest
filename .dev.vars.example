@@ -1,0 +1,8 @@
+# Copy to .dev.vars for `npx wrangler dev`. Never commit .dev.vars.
+# Generate each hash with: node scripts/hash-pin.mjs
+# Escape every $ as \$ here, or dotenv expands them as variables and login fails.
+# (Not needed for `wrangler secret put`, which stores the value as-is.)
+PARENT_PIN_HASH="pbkdf2-sha256\$100000\$<salt>\$<hash>"
+FAMILY_PASSCODE_HASH="pbkdf2-sha256\$100000\$<salt>\$<hash>"
+# Generate with: openssl rand -base64 32
+SESSION_SECRET="<random 32+ byte string>"
